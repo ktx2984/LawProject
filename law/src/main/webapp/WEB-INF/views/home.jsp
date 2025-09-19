@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,14 +44,13 @@
 </head>
 <body>
     <div class="container">
-        <h1>카카오 로그인 성공!</h1>
+        <h1>로그인 성공!</h1>
 
-        <p>닉네임: <span id="nickname">${nickname}</span></p>
-        <p>이메일: <span id="email">${email}</span></p>
+        <p>닉네임: <span id="nickname">${nickname != null ? nickname : '닉네임 없음'}</span></p>
+        <p>이메일: <span id="email">${email != null ? email : '이메일 없음'}</span></p>
+        <p>로그인 제공자: <span id="provider">${provider != null ? provider : '알 수 없음'}</span></p>
 
-        <a href="/logout" class="logout">로그아웃</a>
+        <a href="http://localhost:8087/law/" class="logout">로그아웃</a>
     </div>
-
-    <!-- JSP 환경이면 ${nickname}, ${email} 그대로 사용 가능 -->
 </body>
 </html>
